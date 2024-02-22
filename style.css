@@ -93,7 +93,7 @@
     margin-right: 1rem;
     position: relative;
 }
-.count:after {
+/* .count:after {
     content: '';
     position: absolute;
     border: 1px solid;
@@ -103,5 +103,34 @@
 }
 .count:last-of-type::after{
     border: none;
+} */
+.blue{
+    color: #fff;
+    background-color: blue !important;
+    border-radius: 50%;
 }
-/* .animesan */
+.gol
+{
+    /* position: absolute; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    /* margin: 260px 500px; */
+    animation: fane 01s infinite;
+}
+@keyframes fane
+{
+    /* form{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    } */
+    form{
+        border: 0px solid black;
+    }
+    to{
+        border: 10px solid black;
+    }
+}

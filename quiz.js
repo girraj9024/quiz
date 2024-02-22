@@ -32,11 +32,12 @@ let timer = 5;
 
 // GENERATE A RANDOM ORDER ON PAGE LOAD
 for (let i = 0; i < questions.length; i++) {
+    // red()
     randomOrder.push(getARandomValue());
 }
 
 // PRINT FIRST QUESTION INSTANTLY (WITHOUT DELAY)
-// red(i+1)
+// red()
 printQ();
 
 timerDiv.innerHTML = timer;
@@ -45,13 +46,16 @@ timerDiv.innerHTML = timer;
 const girraj = setInterval(() => {
     if (timer === 1) {
         if (didUserAnswer === false) userAnswers.push("NA");
+        red()
         red(i)
         // sohan()
         printQ();
+        red(i)
         timer = 5;
 
         timerDiv.innerHTML = timer;
     } else {
+        red()
         timer--;
         timerDiv.innerHTML = timer;
     }
@@ -202,10 +206,12 @@ for (let i = 0; i < questions.length; i++) {
 function red() {
     Array.from(counterDiv.children).forEach((counter, index) => {
         if (index < i) {
-            counter.classList.add("red");
-            if (index === i -1) counter.classList.add("red")
-            else
-                counter.classList.add("red")
+            counter.classList.add("gol");
+            if (index === i - 1) counter.classList.add("blue")
+            else {
+                counter.classList.remove("blue")
+                counter.classList.remove("gol")
+            }
         }
     })
 }
